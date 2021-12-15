@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jQuery - ćwiczenie nr 5</title>
+    <style type='text/css'>
+        #div1{ width: 80px; height: 80px; display: none; background-color: brown;}
+        #div2{ width: 80px; height: 80px; display: none; background-color: burlywood;}
+        #div3{ width: 80px; height: 80px; display: none; background-color: red;}
+        #div4{ width: 80px; height: 80px; display: none; background-color: blueviolet;}
+    </style>
+    <script type="text/javascript">
+        jQuery(function(){
+            $("button").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(2000);
+                $("#div4").fadeIn(3000);
+                $("#div4").fadeOut();
+                $("#div3").fadeOut("slow");
+                $("#div2").fadeOut(2000);
+                $("#div1").fadeOut(3000);
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Prezentacja funkcji fadeIn/fadeOut</p>
+    <button>Uruchom Prezentacje FADE</button><br/>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+</body>
+</html>
