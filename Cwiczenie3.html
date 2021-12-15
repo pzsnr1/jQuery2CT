@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ćwiczenie 3 - jQuery</title>
+    <style type="text/css">
+        .mojstylZiom{
+            background-color: aquamarine;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 15px;
+            width: 200px;
+            margin: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            /*
+            $("div").mouseover(function(){
+                $(this).addClass("mojstylZiom");
+            });
+            $("div").mouseout(function(){
+                $(this).removeClass("mojstylZiom");
+            });
+            */
+            $("div").mouseover(function(){
+                $(this).addClass("mojstylZiom");
+            }).mouseout(function(){
+                $(this).removeClass("mojstylZiom");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque velit consectetur temporibus sunt assumenda, tenetur perferendis, ratione unde aut cum quidem ipsam, aliquid earum a quis perspiciatis soluta corporis sit.
+    </div>
+</body>
+</html>
