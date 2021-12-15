@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>ćwiczenie 6 - jQuery</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("button").css("display","none");
+                for(let i=1; i <=10; i++){
+                    $("#paragraf").css("color","red").slideUp(500).slideDown(500);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="paragraf">ZABAWA W jQUERY</p>
+    <button>KLIKNIJ MNIE PROSZĘ</button>
+</body>
+</html>
