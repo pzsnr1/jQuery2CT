@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ćwiczenie 10 jQuery</title>
+    <style type="text/css">
+        h1{
+            color: blueviolet;
+        }
+        .mojaklasa{
+            margin-left: 5px;
+            background-color: cornflowerblue;
+            color: crimson;
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $("#dodaj").on("click",function(){
+                var val = $("input").val();
+                if(val != ""){
+                    var element = $("<li></li>").text(val);
+                    $(element).append("<button class='mojaklasa'>x</button>");
+                    $("#mojalista").append(element);
+                    $("input").val("");
+                    $(".mojaklasa").on("click",function(){
+                        $(this).parent().remove();
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Dodawanie do listy elementów: </h1>
+    <input type="text" placeholder="Nowy punkt listy" />
+    <button id="dodaj">DODAJ</button>
+    <ol id="mojalista"></ol>
+</body>
+</html>
